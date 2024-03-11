@@ -1,0 +1,95 @@
+body {
+    font-family: roboto, sans-serif;
+    
+}
+
+.navbar {
+    background-color: rgb(124, 247, 124);
+}
+
+#cabecalho.nav .nav-link.active {
+    background-color: rgb(79, 124, 223);
+    color:rgb(87, 216, 105);
+}
+
+#cabecalho.nav .nav-link,
+.navbar-brand,
+.navbar-brand-brand:hover,
+.nav-link.active:hover{
+    color:rgb(55, 94, 199);
+}
+    
+.navbar-toggler {
+    background-color: aliceblue;
+}
+
+.section-title {
+    font-family:"Lilita One" cursive;
+    font-size: 40px;
+    font-weight:bolder;   /*aqui modifiquei a fonte, tamanho e coloquei como negrito*/
+}
+
+.text-colored {
+    color: rgb(6, 92, 3);
+}
+
+button
+{
+    background-color: rgb(23, 114, 11);
+    color:antiquewhite 
+}
+
+.nav-link.active button {
+    color:none;
+}
+
+.nav-link:hover {
+    color: rgb(6, 92, 3);
+}
+
+.social-links li {
+list-style: none;
+display:inline;
+}
+
+.social-links a {
+    text-decoration: none;}
+
+
+    @media (max-width: 767px) {
+        .carousel-item img {
+            height: 180px
+        }
+    }
+
+
+    .carousel-item {
+        text-align: center;
+        padding:23px;
+    }
+
+.viagens-international h2,
+h4,h2 {
+    background-color:rgb(75, 115, 228);
+    padding: 30px;
+}
+
+.dados h2{
+    color:rgb(10, 10, 156);
+    background-color:rgb(87, 216, 105);
+    padding: 50px; 
+    height: 120px;   
+}
+
+.pagamentos h4 {
+    background-color:rgb(87, 216, 105) ;
+}
+
+.fotter {
+    padding:14px;    
+    text-align: right; 
+    
+}
+
+
+

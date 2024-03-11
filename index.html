@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto modulo 14</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">   
+        <!--fonts body-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!--fonts sections-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+            <!--bootstrap e css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="mais.css"> <!--As fontes do google sempre vem antes do css-->
+</head>
+<body>
+    
+    <form style="text-align: right; background-color: rgb(124, 247, 124);">
+        <i class="bi bi-person-circle"></i>
+        <label for="text">Usuario:</label>
+            <input type="text" id="usuario" name="usuario">
+            <label for="text">Senha:</label>
+            <input type="number" id="Senha" name="Senha">
+            <button class="submite">Acessar</button>
+    </form>
+    <header class="navbar navbar-expand-lg sticky-top p-5" id="cabecalho"> <!--p é padding-->
+        <div class="container">
+            <img src="./bubbles.png">
+            <h1 class="navbar-brand m-0 section-title fw-bold fs-1">EBAC TRAVEL</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegação">
+                <ul class="nav nav-pills d-block d-md-flex"> <!--d sig display-->
+                    <li class="nav-item fw-bold">
+                        <a href="#pacotes" class="nav-link">
+                            <i class="bi bi-airplane"></i> <!--inclusão do icone-->
+                            Pacotes</a> <!--ME significa margin-end do css que joga para a direita>-->
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#passagem" class="nav-link"> <!--fw bold deixa negrito-->
+                            <i class="bi bi-suitcase"></i>
+                            Passagens</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#servicos" class="nav-link">
+                            <i class="bi bi-building-fill"></i>
+                            Servicos</a>
+                    </li>
+                    <li class="nav-item fw-bold"> 
+                        <a href="#cadastro" class="nav-link">
+                            <i class="bi bi-map-fill"></i> 
+                            Cadastro</a>
+                    </li>  
+                </ul>
+            </nav>
+        </div>        
+    </header>
+    
+    <div class="containe" style="background-color: rgb(85, 85, 236);">
+        <div class="box p-5"  style="color: rgb(212, 227, 240);" >
+            <h3 style="text-align: center; ">Pesquise pacotes</h3>
+            <form id="destino" style="text-align: center;" ></form>   
+                <i class="bi bi-geo-alt"></i>                
+                <label for="text">Destino:</label>
+                <input type="text" id="Endereco" name="Endereco">
+                <i class="bi bi-people-fill"></i>
+                <labe>Quantas pessoas</label>
+                <input type="number" max="31" min="1" />
+                <i class="bi bi-calendar-check"></i>
+                <labe>Ida</label>
+                <input type="number" max="31" min="1" />                         
+                <input type="month" max="dezembro" min="janeiro" />  
+                <i class="bi bi-calendar-check"></i>  
+                <label>Volta</label>                
+                <input type="number" max="31" min="1" />              
+                    <input type="month" max="dezembro" min="janeiro" />
+                <button type="submit">Pesquisar</button>                
+            </form>
+        </div>    
+    </div>
+    <!--carrocel 1-->
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">
+        <section id="pacotes">
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-inner ">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="./carrocel 0 aeroporto.jpg" alt=" aeroporto" style="width: 1500px; height: 500px;">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./carrocel 1 praia.jpg" alt="praia" style="width: 1500px; height: 500px;">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./carrocel 2 bangalos.jpg" alt=" bangalos" style="width: 1500px; height: 500px;">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./carrocel 4 passagem aerea.jpg" alt=" passagem aerea" style="width: 1500px; height: 500px;">
+                    </div>
+                </div>        
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button> 
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button> 
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+        </div>
+            </div>
+        </div>
+        </section>
+                    <!--pacotes-->
+
+            <section id="passagem" class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="section-title text-center fs-3">PACOTES QUE<span class="text-colored"> CABEM NO SEU BOLSO</span></h2>
+                    </div>
+                        <div class="row mt-4">
+                            <div class="col-md-4 p-3">
+                            <img src="./brasilia.jpg" alt="" class="d-block w-100 rounded mb-2">
+                            <h3 class="section-title text-colored fs-4 p-1">
+                                <i class="bi bi-airplane-engines"></i>
+                                Brasilia/DF
+                            </h3>
+                            <p>
+                                O Distrito Federal é totalmente planejado, com lugares específicos para cada coisa.Faça um city tour e conheça Palácio da Alvorada. Congresso Nacional. Palácio do Buriti. Palácio do Planalto. Esplanada dos Ministérios. Praça dos Três Poderes. Estádio Mané Garrincha. Catedral Metropolitana. Santuário Dom Bosco. Praça dos Cristais entre outros.
+                            </p>
+                            <p>
+                                <i class="bi bi-cash-coin"></i>
+                                <strong>A partir de R$ 949,99</strong>
+                            </p>
+                            <div class="buttom">
+                                <button type="submit">Detalhes do pacote</button>
+                            </div>
+                            </div>
+                            <div class="col-md-4 p-3">
+                                <img src="./botanical garden curitiba.jpg" alt="Curitiba/PR" class="d-block w-100 rounded mb-2">
+                                <h3 class="section-title text-colored fs-4 p-1">
+                                    <i class="bi bi-luggage"></i>
+                                    Curitiba/PR
+                                </h3>
+                                <p>
+                                    Venha conhecer Curitiba e seus pontos turisticos destacando O Jardim Botânico é um dos pontos turísticos mais visitados de Curitiba desde sua inauguração em 1991. Criado à imagem dos jardins franceses.
+                                </p>
+                                <p>
+                                    <i class="bi bi-cash-coin"></i>
+                                    <strong>A partir de R$ 999,99</strong>
+                                </p>
+                                <div class="buttom">
+                                    <button type="submit">Detalhes do pacote</button>
+                                </div>                                
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./rio de janeiro.jpg"   alt="Rio de janeiro/RJ" class="d-block w-100 rounded mb-2">
+                                    <h3 class="section-title text-colored fs-4 p-1">
+                                        <i class="bi bi-airplane-engines-fill"></i>
+                                        Rio de janeiro/RJ
+                                    </h3>
+                                    <p>
+                                        O Rio de janeiro continua lindo...famosa pelas praias de Copacabana e Ipanema, pela estátua de 38 metros de altura do Cristo Redentor, no topo do Corcovado, e pelo Pão de Açúcar, um pico de granito com teleféricos até seu cume. 
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-cash-coin"></i>
+                                        <strong>A partir de R$ 1500,00</strong>
+                                    </p>
+                                    <div class="buttom">
+                                        <button type="submit">Detalhes do pacote</button>
+                                    </div>
+                                    </div>
+                        </div>  
+                        <div class="row mt-4">
+                            <div class="col-md-4 p-3">
+                            <img src="./bauneario camburuiu.jpg" alt="Bauneario Camburiu/SC" class="d-block w-100 rounded mb-2">
+                            <h3 class="section-title text-colored fs-4 p-1">
+                                <i class="bi bi-luggage-fill"></i>
+                                Bauneario Camburiu/SC
+                            </h3>
+                            <p>
+                                É conhecida pelos grandes edifícios e por praias como a Praia Central. Bares, restaurantes e lojas preenchem a Avenida Atlântica, uma avenida movimentada junto à praia. O Parque Unipraias fica na foz do Rio Camboriú e oferece vistas a partir das tirolesas e dos teleféricos.
+                            </p>
+                            <p>
+                                <i class="bi bi-cash-coin"></i>
+                                <strong>A partir de R$ 1300,00</strong>
+                            </p>
+                            <div class="buttom">
+                                <button type="submit">Detalhes do pacote</button>
+                            </div>
+                            </div>
+                            <div class="col-md-4 p-3">
+                                <img src="./cataratas.jpg" alt="Foz do Iguaçu/PR" class="d-block w-100 rounded mb-2">
+                                <h3 class="section-title text-colored fs-4 p-1">
+                                    <i class="bi bi-suitcase2-fill"></i>
+                                    Foz do Iguaçu/PR
+                                </h3>
+                                <p>
+                                    Famosa pelas Cataratas do Iguaçu, uma das maiores cachoeiras do mundo que proporciona um dos espetáculos mais impressionantes da natureza,
+                                </p>
+                                <p>
+                                    <i class="bi bi-cash-coin"></i>
+                                    <strong>A partir de R$ 999,99</strong>
+                                </p>
+                                <div class="buttom">
+                                    <button type="submit">Detalhes do pacote</button>
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./são paulo.jpg"   alt="São Paulo/SP" class="d-block w-100 rounded mb-2">
+                                    <h3 class="section-title text-colored fs-4 p-1">
+                                        <i class="bi bi-duffle-fill p-1"></i>
+                                        São Paulo/SP
+                                    </h3>
+                                    <p>
+                                        A cidade que nunca dorme...centro financeiro do Brasil, está entre as cidades mais populosas do mundo, com diversas instituições culturais e uma rica tradição arquitetônica. Há prédios simbólicos como a catedral neogótica, o Edifício Martinelli, um arranha-céu inaugurado em 1929, e o Edifício Copan, com suas linhas curvas projetadas pelo arquiteto modernista Oscar Niemeyer.
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-cash-coin"></i>
+                                        <strong>A partir de R$ 1199,99</strong>
+                                    </p>
+                                    <div class="buttom">
+                                        <button type="submit">Detalhes do pacote</button>
+                                    </div>
+                                    </div>
+                        </div>  
+                    </div>            
+                </section>   
+
+            <section id="pacotes">
+                <div class="viagens-international">
+                    <h2 style="background-color: rgb(223, 52, 86);" >VOOS EM OFERTA! APROVEITE!!!!!!!!</h2>
+                </div>
+                    <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active"  data-bs-interval="2000">
+                                <img src="./disney.jpg " class="rounded mx-auto d-block"  alt=" Viagem para Disney">
+                                <p>
+                                    <h3>Disney</h3>                            
+                                </p>                               
+                                    <h5>Origem: São Paulo/Rio de janeiro</h5>
+                                    Por: Ebac Linhas Aereas
+                                </p>
+                                <p>
+                                    Ida e volta 
+                                </p>
+                                <p>
+                                    Apenas R$ 1400,00
+                                    <div class="buttom">
+                                        <button type="submit">Saiba mais</button>
+                                    </div>                    
+                            </div>                            
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./grecia.jpg" class="rounded mx-auto d-block p-1" alt="Costa na Grecia">
+                                <p >
+                                    <h3>Grecia</h3>
+                                    <h5>Origem: São Paulo</h5>
+                                    Por: Ebac Linhas Aereas
+                                </p>
+                                <p>
+                                    Ida e volta 
+                                </p>
+                                <p>
+                                    Apenas R$ 1400,00
+                                    <div class="buttom">
+                                        <button type="submit">Saiba mais</button>
+                                    </div>
+                                </p>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./Italia-coliseu.jpg" class="rounded mx-auto d-block p-1"  alt=" Coliseu" >
+                                <p>
+                                    <h3>Italia</h3>
+                                </p>
+                                <h5>Origem: São Paulo/Rio de janeiro</h5>
+                                    Por: Ebac Linhas Aereas
+                                </p>
+                                <p>
+                                    Ida e volta 
+                                </p>
+                                <p>
+                                    Apenas R$ 1400,00
+                                    <div class="buttom">
+                                        <button type="submit">Saiba mais</button>
+                                    </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./paris-.jpg" class="rounded mx-auto d-block p-1"  alt=" torre eiffel"> <!--class="rounded mx-auto d-block" centraliza a imagem no carrocel-->
+                                <p>
+                                    <h3>França</h3>
+                                </p>
+                                <h5>Origem: São Paulo/Rio de janeiro</h5>
+                                    Por: Ebac Linhas Aereas
+                                </p>
+                                <p>
+                                    Ida e volta 
+                                </p>
+                                <p>
+                                    Apenas R$ 1400,00
+                                    <div class="buttom">
+                                        <button type="submit">Saiba mais</button>
+                                    </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./nordeste.jpg" class="rounded mx-auto d-block p-1"  alt=" nordeste"> <!--class="rounded mx-auto d-block" centraliza a imagem no carrocel-->
+                                <p>
+                                    <h3>Fernando de Noronha</h3>
+                                </p>
+                                <h5>Origem: São Paulo/Belo Horizonte</h5>
+                                    Por: Ebac Linhas Aereas
+                                </p>
+                                <p>
+                                    Ida e volta 
+                                </p>
+                                <p>
+                                    Apenas R$ 3000,00
+                                    <div class="buttom">
+                                        <button type="submit">Saiba mais</button>
+                                    </div>
+                            </div>
+                        </div>        
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button> 
+                    </div>
+                </section>
+                    <!----> 
+
+            <section id="servicos" class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="section-title text-center mb-5 fs-3">SERVIÇOS DE APOIO PARA SUA VIAGEM</span></h2>
+                    </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav nav-pills flex-column nav-cardapio">
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#passeios" class="fw-bold text-start nav-link text-colored active">Passeios nacionais e internacionais em destaque</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#seguro"class="fw-bold text-start fw-bold text-start nav-link text-colored">Seguro</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#transfer"class="fw-bold text-start nav-link text-colored">Transfer</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#passaporte"class="fw-bold text-start nav-link text-colored">Documentos para viagem nacional e internacional</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#ajuda"class="fw-bold text-start nav-link text-colored">Ajuda</button>
+                        </nav>                        
+                    </aside>
+
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="passeios">
+                                <div class="row">
+                                    <div class="col-md-3 p-3">
+                                        <img class="d-block w-100"  src="./Passeio arraial-do-cabo.jpg" alt="Coca-cola">
+                                        <h5 class="text-colored fw-bold p-1">Arraial do Cabo</h5>
+                                        <p>
+                                            Passeio tem 6 horas de duração, realizado com um guia.
+                                        </p>
+                                        <div class="price">                                                                               
+                                            <del>R$ 300,00</del>
+                                            Por apenas:
+                                        <strong>R$ 150,00</strong>
+                                        <p style="color:darkred">
+                                            *Preço por pessoa
+                                        </p>     
+                                        <p style="color:darkred">
+                                            **Refeição não inclusa
+                                        </p>                                    
+                                        </div>
+                                        <button type="button">Quero</button>
+                                    </div>
+                                    <div class="col-md-3 p-3">
+                                        <img class="d-block w-100"  src="./passeio maragogi.jpg" alt="Suco">
+                                        <h5 class="text-colored fw-bold p-1">Praia de Antunes - Maragogi</h5>
+                                        <p>
+                                            Passeio tem 5 horas de duração, realizado com um guia.
+                                        </p>
+                                        <div class="price">                                                                               
+                                            <del>R$ 350,00</del>
+                                            Por apenas:
+                                        <strong>R$ 180,00</strong>
+                                        </div>
+                                        <p style="color:darkred">
+                                            *Preço por pessoa
+                                        </p>  
+                                        <p style="color:darkred">
+                                            **Refeição não inclusa
+                                        </p>                                           
+                                        <button type="button">Quero</button>
+                                    </div>
+                                    <div class="col-md-3 p-3">
+                                        <img class="d-block w-100"  src="./passeio disney-world.jpg" alt="Coca-cola">
+                                        <h5 class="text-colored fw-bold p-1">Disney World-USA</h5>
+                                        <p>
+                                            Passeio tem 8 horas de duração, guia é opcional
+                                        </p>
+                                        <div class="price">                                                                               
+                                            <del>R$ 2000,00</del>
+                                            Por apenas:
+                                        <strong>R$ 1500,00</strong>
+                                        </div>
+                                        <p style="color:darkred">
+                                            *Preço por pessoa
+                                        </p> 
+                                        <p style="color:darkred">
+                                            **Refeição não inclusa
+                                        </p>    
+                                        <button type="button">Quero</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100"  src="./passeio museu so louvre.jpg" alt="Suco">
+                                        <h5 class="text-colored fw-bold ">Museu Louvre - França</h5>
+                                        <p>
+                                            Passeio tem 4 horas de duração, guia é opcional.
+                                        </p>
+                                        <div class="price">                                                                               
+                                            <del>R$ 12000,00</del>
+                                            Por apenas:
+                                        <strong>R$ 900,00</strong>
+                                        </div>
+                                        <p style="color:darkred">
+                                            *Preço por pessoa
+                                        </p> 
+                                        <p style="color:darkred">
+                                            **Refeição não inclusa
+                                        </p>    
+                                        <button type="button">Quero</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="seguro">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100"  src="./seguro.jpg" alt="Seguro viagem">
+                                        <h5 class="text-colored fw-bold p-1">Viaje tranquilo</h5>
+                                        <p>
+                                            Seguro viagem: Viaje tranquilo e sem surpresas!
+                                        </p>
+                                        <p>
+                                            Apenas R$ 95,00 (periodo de 5 dias).
+                                        </p>
+                                            <p style="color:darkred">
+                                                *Valor por pessoa
+                                            </p>    
+                                            <button type="button">Contrar seguro</button>                              
+                                    </div>                                                         
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="transfer">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100"  src="./transfer.jpg" alt="transfer">
+                                        <h5 class="text-colored fw-bold p-1">Transfer</h5>
+                                        <p>
+                                            Antes de reservar o seu transfer é importante verificar se o serviço é compartilhado ou privativo. 
+                                        </p>
+                                        <p>
+                                            Geralmente possuem horários específicos de saída e incluem 1 ou 2 malas por pessoa.
+                                        </p>
+                                        <p>
+                                            Na hora de escolher o seu transfer você pode optar por veículos do modelo standard ou premium. O que diferencia um do outro é o nível de luxo do veículo
+                                        </p>
+                                        <p>
+                                            Você encontrará todas as informações sobre o lugar de saída do seu transfer no voucher da compra que será enviado para o seu e-mail.
+                                        </p>
+                                        <button type="button p-5">Contrar transfer</button>   
+                                    </div>
+                                    </div>
+                    </div>  
+                            
+                            <div class="tab-pane" id="passaporte">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="d-block w-100"  src="./passport-3127927_640.jpg" alt="passaporte">
+                                        <h5 class="text-colored fw-bold p-1">Passaporte</h5>
+                                        <p>
+                                            Documento de Viagem é todo documento aceito como identificação de um viajante em outro país, onde podem ser registrados vistos, autorizações, entradas e saídas. 
+                                        </p>
+                                        <p>
+                                            Caso você precise providenciar o passaporte acesse o link para maiores informações:
+                                        </p>
+                                        <i class="bi bi-arrow-right-circle-fill"></i>
+                                        <a href="https://servicos.dpf.gov.br/sinpa/home.do">Clique aqui</a>
+                                        </div>
+                                </div>
+                            </div>     
+
+                            <div class="tab-pane" id="ajuda">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="d-block w-100"  src="./telemarketing 1.png" alt="Ajuda">
+                                        <h5 class="text-colored fw-bold p-1">Nossos canais de atendimento</h5>
+                                        <p>
+                                            Caso necessite de suporte, entre em contato conosco:
+                                        </p>
+                                        <i class="bi bi-envelope-at-fill"></i>
+                                        <p>
+                                            E-mail:ebactravel@ebactravel.com
+                                        </p>
+                                        <i class="bi bi-telephone-fill"></i>
+                                        <p>
+                                            Atendimento ao cliente: 11-4040-4040
+                                        </p>
+                                        <i class="bi bi-telephone-fill"></i>
+                                        <p>
+                                            Ouvidoria:0800-040-041
+                                        </p>
+                                        <p>Nosso horario de atendimento é de segunda a sexta-feira das 08:00 as 18:00</p>
+                                        <p>
+                                            Obs:Não atendemos aos sabados, domingos e feriados.
+                                        </p>
+                                    </div>                                                             
+                                </div>
+                            </div>         
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="tab-pane" id="cadastro">
+                    <div>
+                        <h2 class="section-title text-center text-colored fs-3">FAÇA SEU CADASTRO E RECEBA OFERTAS E NOVIDADES</h2>                 
+                    </div>           
+                        <div class="row">
+                        <form type=>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold text-colored">Seu nome</label>
+                                <input type="text" id="nome" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for= "email" class="form-label fw-bold text-colored">E-mail</label>
+                                <input type="email" id="nome" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label fw-bold text-colored">Seu telefone</label>
+                                <input type="tel" id="nome" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cpf" class="form-label fw-bold text-colored">CPF</label>
+                                <input type="cpf" id="nome" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="endereco" class="form-label fw-bold text-colored">Seu endereço</label>
+                                <input type="endereco" id="nome" class="form-control">
+                            </div>  
+                    </div>
+                </div>                
+                
+                    <div class="pagamentos">      
+                        <div>
+                            <h4 class="text-colored fs-5">ESCOLHA A FORMA DE PAGAMENTO:</h4>
+                            <img src="./meios de pagamentos.png"  href="meios de pagamento"> 
+                        </div>                
+                        <div class="mb-3 p-4">
+                            <i class="bi bi-credit-card"></i>
+                            <input type="radio" name="escolha" />   <label>Credito</label>
+                            <input type="radio" name="escolha" />   <label>Debito</label>
+                        </div>
+                        <div class="mb-3">
+                            <label>Numero do Cartão</label>
+                        <input type="text" max="16"/> 
+                        </div>
+                        <div class="mb-3">
+                            <label>Validade do cartão</label>
+                        <input type="month" max="dezembro" min="janeiro" />  
+                        <i class="bi bi-calendar-check"></i> 
+                        </div>               
+                        <form class="cartao">
+                            <div class="mb-3">
+                            <label>Selecione a quantidade de parcelas (até 12 vezes sem juros)</label>
+                            <input type="number" max="12" min="1" />
+                            </div>                
+                        <div class="outros-pagamentos">
+                            <h4 class="text-colored fs-5">OUTRAS FORMAS DE PAGAMENTO:</h4>
+                        </div>                
+                        <div class="mb-3">
+                            <input type="radio" name="escolha"/>    <label>Boleto</label>
+                             *O pagamento do boleto deverá ser realizado em até 72 horas a partir da compra.
+                            </div>
+                        <p> 
+                            ** A informação referente ao pagamento pode demorar até para aparecer em nosso sistema.
+                        </p>
+                        <input type="radio" name="escolha" />   <label>Pix</label>
+                        <p>
+                            ***Pagamento aprovado em até 20 minutos
+                        </p>
+                        <div class="checkbox"> 
+                            <input type="checkbox" id="checkbox-termos"/>                      
+                                Desejo receber informações sobre promocões e novidades por email e whatsapp.                                                                        
+                        </div>
+                        <div class="btn-label p-5">
+                            <button type="submit">Conclua seu cadastro</button>
+                        </div>
+                    </form>
+                </div>
+            </section>                
+            </div>
+
+            <div class="container">
+                <div style="text-align: right; margin-top: 16px;" >
+                    <h3 class="section-title fs-5 xt-colored p-1 w-100">
+                        <i class="bi bi-emoji-laughing"></i>
+                        Nos siga nas redes sociais
+                    </h3>
+                    <ul class="social-links">
+                        <li class="fs-5">
+                            <a href="#">
+                                <i class="bi bi-facebook text-colored"></i>
+                            </a>
+                        </li>
+                        <li class="fs-4 ms-1 me-1">
+                            <a href="#">
+                                <i class="bi bi-instagram text-colored"></i>
+                            </a>
+                        </li>
+                        <li class="fs-4">
+                            <a href="#">
+                                <i class="bi bi-whatsapp text-colored"></i>
+                            </a>
+                        </li>                
+                    </ul>                
+                </div>
+                <fotter>
+                    &copy; EBAC TRAVEL - Todos os direitos reservados - 2024
+                </fotter>
+            </div>                          
+        </section>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+    <script src="./jquery.mask.min.js" ></script>
+    <script src="./jquery.validate.min.js"></script>
+    <script src="./messages_pt_BR.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
+
+
+
+
+
